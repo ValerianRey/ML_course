@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """a function of ploting figures."""
 import numpy as np
-from build_polynomial import *
 import matplotlib.pyplot as plt
+from build_polynomial import build_poly
 
 
 def plot_fitted_curve(y, x, weights, degree, ax):
@@ -15,7 +15,8 @@ def plot_fitted_curve(y, x, weights, degree, ax):
     ax.set_xlabel("x")
     ax.set_ylabel("y")
     ax.set_title("Polynomial degree " + str(degree))
-
+    
+    
 def plot_train_test(train_errors, test_errors, lambdas, degree):
     """
     train_errors, test_errors and lambas should be list (of the same size) the respective train error and test error for a given lambda,
